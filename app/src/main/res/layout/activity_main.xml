@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<RelativeLayout
+    android:visibility="gone"
+    android:id="@+id/controllers"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <Button
+        android:onClick="stop"
+        android:id="@+id/stopb"
+        android:layout_centerInParent="true"
+        android:text="stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="moveForward"
+        android:id="@+id/forward"
+        android:layout_above="@id/stopb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="forwards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="moveRight"
+        android:id="@+id/rightb"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/stopb"
+        android:text="right"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="moveLeft"
+        android:id="@+id/leftb"
+        android:layout_toLeftOf="@id/stopb"
+        android:layout_marginRight="20dp"
+        android:layout_centerVertical="true"
+        android:text="left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="moveBackward"
+        android:id="@+id/backward"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/stopb"
+        android:layout_marginTop="20dp"
+        android:text="backward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="dc"
+        android:layout_marginTop="25dp"
+        android:id="@+id/disconnect"
+        android:text="disconnect"
+        android:layout_below="@id/backward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:layout_marginTop="10dp"
+            android:text="show paired devices"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/devices_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>
